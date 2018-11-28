@@ -27,7 +27,10 @@
   Then invoke the callback function, passing in the first element in the array as it's argument.
 */
 
-// Code Here 
+let first = (arr,cb)=>{
+  cb(arr.shift())
+}
+
 
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -47,7 +50,9 @@ first(names, function(firstName){
   Then invoke the callback, passing in the last element in the array as the argument.
 */
 
-//Code Here
+let last = (arr,cb)=>{
+  cb(arr.pop())
+}
 
 // Do not edit the code below.
 last(names, function(lastName){
@@ -65,7 +70,9 @@ last(names, function(lastName){
   Invoke the callback, passing in the product of the two numbers multiplied as the argument. 
 */
 
-//Code Here
+let multiply=(num1,num2,cb)=>{
+  cb(num1 * num2)
+}
 
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -84,7 +91,9 @@ multiply(4, 3, function(answer){
   If the name does not exist, invoke the callback with false as the argument.
 */
 
-//Code Here 
+let contains = (arr,name,cb)=>{
+  cb(arr.includes(name))
+}
 
 // Do not edit the code below.
 contains(names, 'Colt', function(result){
@@ -105,7 +114,9 @@ contains(names, 'Colt', function(result){
   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
 */
 
-//Code Here
+let uniq = (arr,cb)=>{
+  cb()
+}
 
 // Do not edit the code below.
 uniq(names, function(uniqArr){
@@ -122,7 +133,9 @@ uniq(names, function(uniqArr){
   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
 */
 
-//Code Here 
+let each = (arr,cb)=>{
+  cb(arr.forEach())
+}
 
 // Do not edit the code below.
 each(names, function(item, indice){
@@ -139,7 +152,9 @@ each(names, function(item, indice){
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
-// Code here
+let getUserById = (arr, id, cb)=>{
+  cb(users)
+}
 
 // Do not edit the code below.
 var users = [
