@@ -92,7 +92,11 @@ multiply(4, 3, function(answer){
 */
 
 let contains = (arr,name,cb)=>{
-  cb(arr.includes(name))
+  if (arr.includes(name)){
+  return(cb(true))
+  }else{
+    return(cb(false))
+  }
 }
 
 // Do not edit the code below.
@@ -115,7 +119,10 @@ contains(names, 'Colt', function(result){
 */
 
 let uniq = (arr,cb)=>{
-  cb()
+  
+  cb(uniqArr=arr.filter(function(item,pos){
+    return arr.indexOf(item)==pos
+  }))
 }
 
 // Do not edit the code below.
@@ -134,7 +141,7 @@ uniq(names, function(uniqArr){
 */
 
 let each = (arr,cb)=>{
-  cb(arr.forEach())
+  cb(arr.each(names))
 }
 
 // Do not edit the code below.
@@ -152,8 +159,12 @@ each(names, function(item, indice){
   When the correct user object is found, invoke the callback with the user object as an argument.
 */
 
-let getUserById = (arr, id, cb)=>{
-  cb(users)
+let getUserById = (users, id, cb)=>{
+  for (var i=0; i<users.length; i++){
+    if(users[i].id === id)
+    return(cb(user.id))
+  }
+  
 }
 
 // Do not edit the code below.
